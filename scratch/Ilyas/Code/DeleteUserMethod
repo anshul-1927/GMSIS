@@ -1,0 +1,17 @@
+public void deleteButtonClicked(){
+	ObservableList<SystemUser> userSelected = usersTable.getSelectionModel().getSelectedItems();
+	if(userSelected.size() == 0)
+		return;
+	boolean continueWithDelete;
+	String message = "Are you sure you want to delete the system user?";
+	
+	continueWithDelete = showConfirmation(message);
+	if(!continueWithDelete)
+		return;
+		
+	for(SystemUser su : userSelected){
+		int userID = Integer.parseInt(su.getID());
+		String sql = "DELETE FROM USER WHERE UserID='"+userID+"';";
+		database.update(sql);
+	}
+}

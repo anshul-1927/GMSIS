@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagrep.gui.AddWindowController">
+   <children>
+      <Label layoutX="187.0" layoutY="33.0" text="Add New Booking" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="106.0" text="Type">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="143.0" text="Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="216.0" text="Duration">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="253.0" text="Vehicle">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="288.0" text="Customer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="324.0" text="Mechanic">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="entryType" layoutX="161.0" layoutY="102.0" prefHeight="25.0" prefWidth="265.0" />
+      <DatePicker fx:id="entryDate" layoutX="161.0" layoutY="139.0" prefHeight="25.0" prefWidth="265.0" />
+      <ChoiceBox fx:id="entryReg" layoutX="161.0" layoutY="248.0" prefHeight="25.0" prefWidth="265.0" />
+      <ChoiceBox fx:id="entryCustomer" layoutX="161.0" layoutY="283.0" prefHeight="25.0" prefWidth="265.0" />
+      <ChoiceBox fx:id="entryMechanic" layoutX="161.0" layoutY="319.0" prefHeight="25.0" prefWidth="265.0" />
+      <Button fx:id="confirmButton" layoutX="473.0" layoutY="101.0" mnemonicParsing="false" onAction="#addEntry" prefHeight="41.0" prefWidth="99.0" text="Confirm" />
+      <Button fx:id="cancelButton" layoutX="473.0" layoutY="158.0" mnemonicParsing="false" onAction="#cancel" prefHeight="41.0" prefWidth="99.0" text="Cancel" />
+      <TextField fx:id="entryDuration" layoutX="161.0" layoutY="211.0" prefHeight="31.0" prefWidth="265.0" promptText="HH:MM (e.g. 02:30)" />
+      <Label layoutX="63.0" layoutY="180.0" text="Time">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="entryTime" layoutX="161.0" layoutY="175.0" prefHeight="31.0" prefWidth="265.0" promptText="HH:MM (e.g. 09:00)" />
+   </children>
+</AnchorPane>

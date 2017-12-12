@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="927.0" stylesheets="@VehiclesScreen.css" xmlns="http://javafx.com/javafx/8.0.111"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicles.gui.EditVehicleController">
+   <children>
+      <Label layoutX="185.0" layoutY="29.0" prefHeight="27.0" prefWidth="213.0" text="Vehicle Details" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="modelFieldEdit" layoutX="162.0" layoutY="149.0" prefHeight="27.0" prefWidth="234.0" promptText="Model" />
+      <TextField fx:id="manufacturerFieldEdit" layoutX="162.0" layoutY="181.0" prefHeight="27.0" prefWidth="234.0" promptText="Manufacturer" />
+      <TextField fx:id="engineSizeFieldEdit" layoutX="163.0" layoutY="216.0" prefHeight="27.0" prefWidth="234.0" promptText="Engine Size" />
+      <TextField fx:id="fuelTypeFieldEdit" layoutX="163.0" layoutY="250.0" prefHeight="27.0" prefWidth="234.0" promptText="Fuel Type" />
+      <TextField fx:id="colourFieldEdit" layoutX="163.0" layoutY="284.0" prefHeight="27.0" prefWidth="234.0" promptText="Colour" />
+      <Button layoutX="629.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="54.0" prefWidth="142.0" styleClass="viewButton" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+      <ComboBox fx:id="vehicleTemplateDropDownList" layoutX="162.0" layoutY="82.0" prefHeight="25.0" prefWidth="234.0" promptText="Vehicle Templates" />
+      <ComboBox fx:id="vehicleTypeDropDownList" layoutX="162.0" layoutY="116.0" prefHeight="25.0" prefWidth="234.0" promptText="Vehicle Type" />
+      <TextField fx:id="mileageFieldEdit" layoutX="164.0" layoutY="356.0" prefHeight="27.0" prefWidth="234.0" promptText="Mileage" />
+      <TextField fx:id="warantyAddressField" layoutX="583.0" layoutY="147.0" prefHeight="27.0" prefWidth="234.0" promptText="Waranty Address" />
+      <TextField fx:id="warantyCompanyField" layoutX="583.0" layoutY="113.0" prefHeight="27.0" prefWidth="234.0" promptText="Waranty Company" />
+      <Label layoutX="629.0" layoutY="29.0" prefHeight="27.0" prefWidth="213.0" text="Waranty " textFill="#283593">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit" layoutX="629.0" layoutY="363.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="54.0" prefWidth="142.0" styleClass="viewButton" text="Exit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="629.0" layoutY="290.0" mnemonicParsing="false" onAction="#clearEditFields" prefHeight="54.0" prefWidth="142.0" styleClass="viewButton" text="Clear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="warning" layoutX="489.0" layoutY="440.0" prefHeight="38.0" prefWidth="284.0" textFill="#eb0c0c">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TextField fx:id="MoTFieldEdit" layoutX="164.0" layoutY="321.0" prefHeight="27.0" prefWidth="234.0" promptText="MoT" />
+      <TextField fx:id="warantyExpDateField" layoutX="583.0" layoutY="182.0" prefHeight="27.0" prefWidth="234.0" promptText="Warranty Exp date" />
+      <RadioButton fx:id="uWarranty" layoutX="563.0" layoutY="84.0" mnemonicParsing="false" styleClass="AddVehicle" text="Under Warranty" />
+      <RadioButton fx:id="wWarranty" layoutX="701.0" layoutY="84.0" mnemonicParsing="false" styleClass="AddVehicle" text="Without Warranty" />
+      <Label layoutX="75.0" layoutY="154.0" text="Model:" />
+      <Label layoutX="74.0" layoutY="188.0" text="Manufacturer:" />
+      <Label layoutX="74.0" layoutY="222.0" text="Engine Size:" />
+      <Label layoutX="74.0" layoutY="256.0" text="Fuel Type:" />
+      <Label layoutX="73.0" layoutY="288.0" text="Colour:" />
+      <Label layoutX="74.0" layoutY="325.0" text="MoT:" />
+      <Label layoutX="74.0" layoutY="361.0" text="Mileage:" />
+      <Label layoutX="516.0" layoutY="118.0" text="Company:" />
+      <Label layoutX="517.0" layoutY="153.0" text="Address:" />
+      <Label layoutX="517.0" layoutY="186.0" text="Exp. Date:" />
+   </children>
+   
+   
+</AnchorPane>

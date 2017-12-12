@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <columnConstraints>
+    <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="800.0" minWidth="-Infinity" percentWidth="85.0" prefWidth="850.0" />
+    <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="-Infinity" prefWidth="150.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="-Infinity" prefHeight="400.0" valignment="CENTER" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <TableView minHeight="-Infinity" prefHeight="400.0" prefWidth="200.0">
+        <columns>
+          <TableColumn maxWidth="154.0" minWidth="-1.0" prefWidth="154.0" text="ID" />
+          <TableColumn minWidth="0.0" prefWidth="243.0" text="Name" />
+            <TableColumn minWidth="0.0" prefWidth="305.0" text="Description" />
+            <TableColumn minWidth="0.0" prefWidth="146.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <Button mnemonicParsing="false" prefWidth="80.0" text="Add" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="350.0" right="35.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefWidth="80.0" text="Edit" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="200.0" right="35.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefWidth="80.0" text="Delete" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="50.0" right="35.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefWidth="80.0" text="Back" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets right="35.0" top="400.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>

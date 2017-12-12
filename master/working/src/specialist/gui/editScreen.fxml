@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.gui.EditScreenController">
+   <children>
+      <Label layoutX="175.0" layoutY="35.0" text="Edit Specialist Repair" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="355.0" text="SPC">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="395.0" text="Delivery Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="432.0" text="Return Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="146.0" text="Booking">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="317.0" text="Part">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dDatePicker" editable="false" layoutX="161.0" layoutY="392.0" prefHeight="25.0" prefWidth="265.0" />
+      <Button fx:id="confirmButton" layoutX="456.0" layoutY="323.0" mnemonicParsing="false" onAction="#confirmAdd" prefHeight="41.0" prefWidth="99.0" text="Confirm" />
+      <Button fx:id="closeButton" layoutX="456.0" layoutY="392.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="41.0" prefWidth="99.0" text="Cancel" />
+      <DatePicker fx:id="rDatePicker" editable="false" layoutX="161.0" layoutY="428.0" prefHeight="25.0" prefWidth="265.0" />
+      <ComboBox fx:id="spcChoice" layoutX="161.0" layoutY="351.0" prefHeight="25.0" prefWidth="265.0" />
+      <ComboBox fx:id="bookChoice" layoutX="161.0" layoutY="142.0" onAction="#setBookDetails" prefHeight="25.0" prefWidth="265.0" />
+      <ComboBox fx:id="partChoice" layoutX="161.0" layoutY="313.0" prefHeight="25.0" prefWidth="265.0" />
+      <ComboBox fx:id="custChoice" layoutX="161.0" layoutY="101.0" onAction="#setBookComboBox" prefHeight="25.0" prefWidth="265.0" />
+      <Label layoutX="82.0" layoutY="105.0" text="Customer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="469.0" text="Cost">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="costField" layoutX="161.0" layoutY="465.0" prefHeight="27.0" prefWidth="126.0" promptText="e.g 150.00" />
+      <Label layoutX="85.0" layoutY="254.0" text="Make:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="284.0" text="Model:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="224.0" prefHeight="19.0" prefWidth="58.0" text="Reg No:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="vRegNoLabel" layoutX="140.0" layoutY="224.0" prefHeight="19.0" prefWidth="140.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="vModelLabel" layoutX="140.0" layoutY="284.0" prefHeight="19.0" prefWidth="140.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="vMakeLabel" layoutX="140.0" layoutY="254.0" prefHeight="19.0" prefWidth="140.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="184.0" text="Vehicle Details" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="184.0" text="Booking Details" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="224.0" prefHeight="19.0" prefWidth="43.0" text="Type:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="310.0" layoutY="284.0" text="Duration:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="254.0" text="Date &amp; Time:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="bTypeLabel" layoutX="378.0" layoutY="224.0" prefHeight="19.0" prefWidth="140.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="bDateLabel" layoutX="378.0" layoutY="254.0" prefHeight="19.0" prefWidth="140.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="bDurationLabel" layoutX="378.0" layoutY="284.0" prefHeight="19.0" prefWidth="140.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

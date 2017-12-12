@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="801.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicles.gui.VehiclesScreenController">
+   <children>
+      <TextField fx:id="searchField" layoutX="18.0" layoutY="24.0" prefHeight="27.0" prefWidth="926.0" promptText="Search Vehicle" />
+      <Button layoutX="1140.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="27.0" prefWidth="126.0" text="Search" />
+      <TableView fx:id="vehicleTable" layoutX="18.0" layoutY="55.0" prefHeight="239.0" prefWidth="1252.0">
+        <columns>
+            <TableColumn fx:id="colVehicleType" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="colRegNum" prefWidth="113.0" text="Reg. Num." />
+            <TableColumn fx:id="colVehMake" prefWidth="107.0" text="Make" />
+          <TableColumn fx:id="colModel" prefWidth="96.0" text="Model" />
+            <TableColumn fx:id="colFuel" prefWidth="83.0" text="Fuel" />
+            <TableColumn fx:id="colColor" prefWidth="75.0" text="colour" />
+            <TableColumn fx:id="colEngSize" prefWidth="75.0" text="Eng. Size" />
+            <TableColumn fx:id="colMileage" prefWidth="103.0" text="Mileage" />
+            <TableColumn fx:id="colMoT" prefWidth="87.0" text="MoT" />
+            <TableColumn fx:id="colLastService" prefWidth="121.0" text="LastService" />
+            <TableColumn prefWidth="214.0" text="Customer ">
+               <columns>
+                  <TableColumn fx:id="colLastName" prefWidth="114.0" text="Name" />
+                  <TableColumn fx:id="colName" prefWidth="110.0" text="Surname" />
+               </columns>
+            </TableColumn>
+            <TableColumn maxWidth="346.0" minWidth="-1.0" prefWidth="199.0" text="Next Booking">
+               <columns>
+                  <TableColumn fx:id="colNextBookingDate" prefWidth="154.0" text="Date" />
+                  <TableColumn fx:id="colBookingType" prefWidth="93.0" text="Type" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button layoutX="376.0" layoutY="348.0" mnemonicParsing="false" onAction="#addVehicle" prefHeight="51.0" prefWidth="137.0" text="Add" />
+      <Button layoutX="572.0" layoutY="348.0" mnemonicParsing="false" onAction="#delete" prefHeight="51.0" prefWidth="137.0" text="Delete" />
+      <Button layoutX="376.0" layoutY="617.0" mnemonicParsing="false" onAction="#handlePastBookings" prefHeight="51.0" prefWidth="137.0" text="Past Bookings" />
+      <Button layoutX="771.0" layoutY="610.0" mnemonicParsing="false" onAction="#handleFutureBookings" prefHeight="51.0" prefWidth="137.0" text="Future Bookings" />
+      <Button layoutX="575.0" layoutY="613.0" mnemonicParsing="false" onAction="#handeParts" prefHeight="51.0" prefWidth="137.0" text="Parts" />
+      <Label layoutX="839.0" layoutY="174.0" />
+      <ChoiceBox fx:id="searchOpt" layoutX="959.0" layoutY="25.0" prefHeight="27.0" prefWidth="154.0" />
+      <Label layoutX="109.0" layoutY="302.0" prefHeight="27.0" prefWidth="213.0" text="Add New Vehicle" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="customerDropDownList" layoutX="98.0" layoutY="335.0" prefHeight="25.0" prefWidth="234.0" promptText="Customer" />
+      <ComboBox fx:id="vehicleTypeDropDownList" layoutX="99.0" layoutY="397.0" prefHeight="25.0" prefWidth="234.0" promptText="Vehicle Type" />
+      <TextField fx:id="modelFieldAdd" layoutX="99.0" layoutY="428.0" prefHeight="27.0" prefWidth="234.0" promptText="Model" />
+      <TextField fx:id="regNumberFieldAdd" layoutX="98.0" layoutY="459.0" prefHeight="27.0" prefWidth="234.0" promptText="Registration Number" />
+      <TextField fx:id="manufacturerFieldAdd" layoutX="99.0" layoutY="488.0" prefHeight="27.0" prefWidth="234.0" promptText="Manufacturer" />
+      <TextField fx:id="engineSizeFieldAdd" layoutX="99.0" layoutY="518.0" prefHeight="27.0" prefWidth="234.0" promptText="Engine Size" />
+      <TextField fx:id="fuelTypeFieldAdd" layoutX="99.0" layoutY="548.0" prefHeight="27.0" prefWidth="234.0" promptText="Fuel Type" />
+      <TextField fx:id="colourFieldAdd" layoutX="99.0" layoutY="579.0" prefHeight="27.0" prefWidth="234.0" promptText="Colour" />
+      <TextField fx:id="MoTFieldAdd" layoutX="99.0" layoutY="608.0" prefHeight="27.0" prefWidth="234.0" promptText="MoT" />
+      <TextField fx:id="mileageFieldAdd" layoutX="98.0" layoutY="641.0" prefHeight="27.0" prefWidth="234.0" promptText="Mileage" />
+      <Button layoutX="771.0" layoutY="348.0" mnemonicParsing="false" onAction="#editVehicle" prefHeight="51.0" prefWidth="137.0" text="Edit" />
+      <Label layoutX="1017.0" layoutY="301.0" prefHeight="27.0" prefWidth="213.0" text="Edit Vehicle" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="vehicleTemplateDropDownList" layoutX="99.0" layoutY="365.0" prefHeight="25.0" prefWidth="234.0" promptText="Vehicle Templates" />
+      <TextField fx:id="modelFieldEdit" layoutX="996.0" layoutY="335.0" prefHeight="27.0" prefWidth="234.0" promptText="Model" />
+      <TextField fx:id="regNumberFieldEdit" layoutX="996.0" layoutY="365.0" prefHeight="27.0" prefWidth="234.0" promptText="Registration Number" />
+      <TextField fx:id="manufacturerFieldEdit" layoutX="996.0" layoutY="397.0" prefHeight="27.0" prefWidth="234.0" promptText="Manufacturer" />
+      <TextField fx:id="engineSizeFieldEdit" layoutX="998.0" layoutY="428.0" prefHeight="27.0" prefWidth="234.0" promptText="Engine Size" />
+      <TextField fx:id="fuelTypeFieldEdit" layoutX="998.0" layoutY="459.0" prefHeight="27.0" prefWidth="234.0" promptText="Fuel Type" />
+      <TextField fx:id="colourFieldEdit" layoutX="998.0" layoutY="488.0" prefHeight="27.0" prefWidth="234.0" promptText="Colour" />
+      <TextField fx:id="MoTFieldEdit" layoutX="998.0" layoutY="518.0" prefHeight="27.0" prefWidth="234.0" promptText="MoT" />
+      <TextField fx:id="mileageFieldEdit" layoutX="998.0" layoutY="548.0" prefHeight="27.0" prefWidth="234.0" promptText="Mileage" />
+      <Label layoutX="575.0" layoutY="447.0" prefHeight="30.0" prefWidth="161.0" text="Add Waranty" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="warantyCompanyField" layoutX="526.0" layoutY="484.0" prefHeight="27.0" prefWidth="234.0" promptText="Waranty Company" />
+      <TextField fx:id="warantyAddressField" layoutX="526.0" layoutY="520.0" prefHeight="27.0" prefWidth="234.0" promptText="Waranty Address" />
+      <TextField fx:id="warantyExpDateField" layoutX="526.0" layoutY="555.0" prefHeight="27.0" prefWidth="234.0" promptText="Waranty Expiry Date" />
+      <Label fx:id="warning" layoutX="526.0" layoutY="307.0" prefHeight="30.0" prefWidth="234.0" textFill="#eb0e0e">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="loadButton" layoutX="1045.0" layoutY="606.0" mnemonicParsing="false" onAction="#loadButtonHandler" prefHeight="71.0" prefWidth="171.0" text="Load Vehicles">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

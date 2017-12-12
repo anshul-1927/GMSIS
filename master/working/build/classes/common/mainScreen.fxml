@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common.mainScreenController">
+   <children>
+      <TabPane layoutX="42.0" prefHeight="600.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Vehicle Records">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="567.0" prefWidth="1000.0">
+                     <children>
+                        <fx:include source="../vehicles/gui/vehiclesScreen.fxml" />
+                     </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Customer Accounts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <fx:include source="../customers/gui/customersScreen.fxml" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Diagnosis and Repair Bookings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                       <fx:include source="../diagrep/gui/diagrepScreen.fxml" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Parts">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <fx:include source="../parts/gui/partsScreen.fxml" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Specialist Repairs">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <fx:include source="../specialist/gui/specialistScreen.fxml" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="adminTab" text="Admin">
+              <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <fx:include source="../common/AdminScreen.fxml" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

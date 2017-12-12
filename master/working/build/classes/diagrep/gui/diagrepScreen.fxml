@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagrep.gui.DiagrepScreenController">
+   <children>
+      <TextField fx:id="searchField" layoutX="27.0" layoutY="28.0" prefHeight="31.0" prefWidth="624.0" />
+      <Button fx:id="searchButton" alignment="CENTER" contentDisplay="CENTER" layoutX="869.0" layoutY="28.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="190.0" text="Search" />
+      <Button layoutX="1079.0" layoutY="28.0" mnemonicParsing="false" onAction="#reset" prefHeight="70.0" prefWidth="164.0" text="All Bookings / Reset" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="pastButton" layoutX="1079.0" layoutY="118.0" mnemonicParsing="false" onAction="#displayPastBookings" prefHeight="70.0" prefWidth="164.0" text="Past Bookings" />
+      <Button fx:id="futureButton" layoutX="1079.0" layoutY="208.0" mnemonicParsing="false" onAction="#displayFutureBookings" prefHeight="70.0" prefWidth="164.0" text="Future Bookings" />
+      <Separator layoutX="1070.0" layoutY="295.0" prefHeight="0.0" prefWidth="185.0" />
+      <Button layoutX="1079.0" layoutY="315.0" mnemonicParsing="false" onAction="#addEntry" prefHeight="70.0" prefWidth="164.0" text="Add Booking" />
+      <Button layoutX="1079.0" layoutY="405.0" mnemonicParsing="false" onAction="#editEntry" prefHeight="70.0" prefWidth="164.0" text="Edit Booking" />
+      <Button layoutX="1079.0" layoutY="495.0" mnemonicParsing="false" onAction="#deleteEntry" prefHeight="70.0" prefWidth="164.0" text="Delete Booking" />
+      <Button layoutX="1079.0" layoutY="585.0" mnemonicParsing="false" onAction="#displayRegistry" prefHeight="70.0" prefWidth="164.0" text="Mechanics Registry" />
+      <ScrollPane layoutX="28.0" layoutY="66.0" prefHeight="588.0" prefWidth="1031.0">
+         <content>
+            <TableView fx:id="diagrepTable" prefHeight="565.0" prefWidth="1350.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="colType" prefWidth="100.0" text="Type" />
+                <TableColumn fx:id="colDate" prefWidth="150.0" text="Date" />
+                  <TableColumn fx:id="colDuration" prefWidth="85.0" text="Duration" />
+                  <TableColumn fx:id="colVeh" prefWidth="700.0" text="Vehicle">
+                     <columns>
+                        <TableColumn fx:id="colVehReg" prefWidth="100.0" text="Reg. No." />
+                        <TableColumn fx:id="colVehManufacturer" prefWidth="113.0" text="Manufacturer" />
+                        <TableColumn fx:id="colVehMileage" prefWidth="100.0" text="Mileage" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colCust" prefWidth="335.0" text="Customer">
+                     <columns>
+                        <TableColumn fx:id="colCustID" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="colCustfirstName" prefWidth="150.0" text="First" />
+                        <TableColumn fx:id="colCustlastName" prefWidth="150.0" text="Last" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colMech" prefWidth="96.0" text="Mechanic">
+                     <columns>
+                        <TableColumn fx:id="colMechID" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="colMechDuration" prefWidth="170.0" text="Duration" />
+                     </columns>
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <ChoiceBox fx:id="searchOptions" layoutX="665.0" layoutY="28.0" prefHeight="31.0" prefWidth="190.0" />
+   </children>
+</AnchorPane>

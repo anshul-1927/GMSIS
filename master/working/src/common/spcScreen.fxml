@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.gui.SPCScreenController">
+   <children>
+      <Button fx:id="closeButton" layoutX="347.0" layoutY="549.0" mnemonicParsing="false" onAction="#closeWindow" text="Close">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="192.0" layoutY="24.0" text="Specialist Repair Companies" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="670.0" layoutY="41.0" mnemonicParsing="false" onAction="#refreshPage" text="Refresh" />
+      <TableView fx:id="table" layoutX="33.0" layoutY="71.0" onMouseClicked="#fillTextFields" prefHeight="280.0" prefWidth="708.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="32.0" text="ID" />
+            <TableColumn fx:id="nameCol" prefWidth="128.0" text="Name" />
+            <TableColumn fx:id="addressCol" prefWidth="226.0" text="Address" />
+            <TableColumn fx:id="phoneCol" prefWidth="130.0" text="Phone Number" />
+            <TableColumn fx:id="emailCol" prefWidth="141.0" text="Email" />
+            <TableColumn fx:id="inUseCol" prefWidth="50.0" text="In Use" />
+         </columns>
+      </TableView>
+      <TextField fx:id="nameTf" layoutX="171.0" layoutY="364.0" prefHeight="27.0" prefWidth="205.0" />
+      <Label layoutX="101.0" layoutY="363.0" text="Name">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label layoutX="78.0" layoutY="403.0" text="Address">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label layoutX="9.0" layoutY="444.0" text="Phone Number">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label layoutX="108.0" layoutY="484.0" text="Email">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <TextField fx:id="addressTf" layoutX="171.0" layoutY="404.0" prefHeight="27.0" prefWidth="205.0" />
+      <TextField fx:id="phoneTf" layoutX="171.0" layoutY="445.0" prefHeight="27.0" prefWidth="205.0" />
+      <TextField fx:id="emailTf" layoutX="171.0" layoutY="485.0" prefHeight="27.0" prefWidth="205.0" />
+      <Button fx:id="updateButton" layoutX="503.0" layoutY="452.0" mnemonicParsing="false" onAction="#editSPC" prefHeight="67.0" prefWidth="155.0" text="Update Selected SPC" />
+      <Button fx:id="addButton" layoutX="419.0" layoutY="358.0" mnemonicParsing="false" onAction="#addSPC" prefHeight="67.0" prefWidth="155.0" text="Add SPC" />
+      <Button fx:id="deleteButton" layoutX="593.0" layoutY="358.0" mnemonicParsing="false" onAction="#deleteSPC" prefHeight="67.0" prefWidth="155.0" text="Delete SPC" />
+      <CheckBox fx:id="inUseBox" layoutX="171.0" layoutY="519.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="155.0" text="Use this SPC">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

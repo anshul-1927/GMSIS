@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.ViewBookingsScreenController">
+   <children>
+      <VBox layoutX="51.0" prefHeight="437.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Customer Bookings">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="customerNameLabel" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="550.0" textFill="#484848" wrapText="true">
+               <VBox.margin>
+                  <Insets left="20.0" right="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="bookingsTable" prefHeight="306.0" prefWidth="550.0">
+                <placeholder>
+                                <Label text="There are no such bookings under this customer." />
+                </placeholder>
+              <columns>
+                <TableColumn fx:id="bookingTypeCol" prefWidth="110.5" text="Booking Type" />
+                <TableColumn fx:id="dateCol" prefWidth="94.5" text="Date" />
+                  <TableColumn fx:id="durationCol" prefWidth="108.5" text="Duration" />
+                  <TableColumn fx:id="vehicleRegCol" prefWidth="118.5" text="Vehicle Reg. No" />
+                  <TableColumn fx:id="mechanicCol" prefWidth="125.0" text="Mechanic" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="3.0" />
+               </VBox.margin>
+            </TableView>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="100.0" text="Close">
+               <VBox.margin>
+                  <Insets left="480.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

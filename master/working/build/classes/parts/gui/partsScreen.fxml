@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.gui.PartsScreenController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0">
+         <center>
+            <TableView fx:id="partsInstalledTable" prefHeight="508.0" prefWidth="1071.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="partIdCol" prefWidth="100.0" text="Part ID" />            
+                <TableColumn fx:id="partNameCol" prefWidth="116.0" text="Part" />
+                <TableColumn fx:id="installDateCol" prefWidth="152.0" text="Installation Date" />
+                <TableColumn fx:id="warrantyDateCol" prefWidth="162.0" text="Warranty Date" />
+                  <TableColumn maxWidth="-Infinity" minWidth="-1.0" prefWidth="600.0" text="Customer">
+                     <columns>
+                        <TableColumn fx:id="custIDCol" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="custFNameCol" prefWidth="100.0" text="First Name" />
+                        <TableColumn fx:id="custSNameCol" prefWidth="50.0" text="Second Name" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="vehicleIDCol" prefWidth="137.0" text="Vehicle ID" />
+                  <TableColumn fx:id="bookingID" prefWidth="154.0" text="Booking ID" />
+              </columns>
+            </TableView>
+         </center>
+         <right>
+            <VBox alignment="CENTER" prefHeight="649.0" prefWidth="209.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Separator>
+                  <Button fx:id="stockButton" mnemonicParsing="false" onAction="#handleStockButtonAction" prefHeight="50.0" prefWidth="100.0" text="Stock" />
+                  <Separator prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </Separator>
+                  <Button fx:id="addButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="50.0" prefWidth="100.0" text="Add">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleEditButtonAction" prefHeight="50.0" prefWidth="100.0" text="Edit">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="50.0" prefWidth="100.0" text="Delete">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="50.0" />
+                     </padding>
+                  </Separator>
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <HBox prefHeight="61.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="searchButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleSearch" prefHeight="50.0" prefWidth="784.0" text="Search" textAlignment="CENTER">
+                     <graphic>
+                        <TextField fx:id="searchField" alignment="CENTER" prefHeight="40.0" prefWidth="678.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="45.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ComboBox fx:id="searchByCB" prefHeight="50.0" prefWidth="181.0" promptText="Search by">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="15.0" top="10.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </ComboBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0">
+                     <HBox.margin>
+                        <Insets bottom="12.0" left="45.0" top="12.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#handleRefreshButtonAction" prefHeight="50.0" prefWidth="100.0" text="Refresh">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="50.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

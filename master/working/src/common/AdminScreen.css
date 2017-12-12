@@ -1,0 +1,46 @@
+/*
+Good place to choose colours from: https://www.materialui.co/colors
+*/
+
+/* colour of the any text with emphasis*/
+.bold {
+     -fx-text-fill: #283593;
+}
+
+.button {
+    -fx-background-color: #1E88E5;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.spcButton {
+    -fx-background-color: #a10000;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.coreButton {
+    -fx-background-color: #1E88E5;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.refreshButton {
+    -fx-background-color: #a10000;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+}
+
+.radio-button {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}

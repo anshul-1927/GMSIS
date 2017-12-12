@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="601.0" stylesheets="@VehiclesScreen.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicles.gui.VehiclePartsController">
+   <children>
+      <TableView fx:id="partsTable" layoutX="24.0" layoutY="108.0" prefHeight="433.0" prefWidth="476.0">
+         <columns>
+            <TableColumn fx:id="colPartName" prefWidth="233.0" text="Type" />
+            <TableColumn fx:id="colPartInstallDate" prefWidth="242.0" text="Date" />
+         </columns>
+      </TableView>
+      <Label layoutX="526.0" layoutY="337.0" text="Name: " />
+      <Label layoutX="525.0" layoutY="376.0" text="Surname: " />
+      <Label layoutX="577.0" layoutY="263.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custNameField" editable="false" layoutX="593.0" layoutY="332.0" />
+      <TextField fx:id="custSurnameField" editable="false" layoutX="594.0" layoutY="371.0" />
+      <Label alignment="CENTER" layoutX="506.0" layoutY="297.0" prefHeight="20.0" prefWidth="294.0" text="Customer " textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="496.0" layoutY="182.0" prefHeight="20.0" prefWidth="294.0" text="Vehicle" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="516.0" layoutY="215.0" text="Reg. Num:" />
+      <Label layoutX="518.0" layoutY="253.0" text="Model:" />
+      <TextField fx:id="vehRegField" editable="false" layoutX="585.0" layoutY="210.0" />
+      <TextField fx:id="vehModelField" editable="false" layoutX="585.0" layoutY="249.0" />
+      <Separator layoutX="514.0" layoutY="405.0" prefHeight="2.0" prefWidth="262.0" />
+      <Separator layoutX="512.0" layoutY="288.0" prefHeight="3.0" prefWidth="262.0" />
+      <Label alignment="CENTER" layoutX="115.0" layoutY="49.0" prefHeight="20.0" prefWidth="294.0" text="Vehicle Parts" textAlignment="CENTER" textFill="#285090">
+         <font>
+            <Font name="Arial" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit" layoutX="594.0" layoutY="425.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="27.0" prefWidth="150.0" styleClass="viewButton" text="Exit" />
+      <Label layoutX="577.0" layoutY="157.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="496.0" layoutY="76.0" prefHeight="20.0" prefWidth="294.0" text="Booking Details" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="516.0" layoutY="109.0" text="Type:" />
+      <Label layoutX="518.0" layoutY="147.0" text="Date:" />
+      <TextField fx:id="bookingType" editable="false" layoutX="585.0" layoutY="104.0" />
+      <TextField fx:id="bookingDate" editable="false" layoutX="585.0" layoutY="143.0" />
+      <Separator layoutX="512.0" layoutY="180.0" prefHeight="3.0" prefWidth="262.0" />
+   </children>
+</AnchorPane>

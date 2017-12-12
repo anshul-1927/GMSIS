@@ -1,0 +1,22 @@
+/*
+Good place to choose colours from: https://www.materialui.co/colors
+*/
+
+/* colour of the any text with emphasis*/
+
+.button {
+    -fx-background-color: #1E88E5;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+}
+
+.header {
+    -fx-text-fill: #283593;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}

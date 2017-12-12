@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="470.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.ViewVehiclesScreenController">
+   <children>
+      <VBox layoutX="51.0" prefHeight="437.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Customer Vehicles">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="customerNameLabel" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="550.0" textFill="#484848" wrapText="true">
+               <VBox.margin>
+                  <Insets left="20.0" right="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="vehiclesTable" prefHeight="346.0" prefWidth="550.0">
+                <placeholder>
+                                <Label text="There are no vehicles stored for this customer." />
+                </placeholder>
+              <columns>
+                <TableColumn fx:id="vehicleRegCol" prefWidth="89.5" text="Vehicle Reg" />
+                <TableColumn fx:id="typeCol" prefWidth="65.5" text="Type" />
+                  <TableColumn fx:id="makeCol" prefWidth="87.0" text="Make" />
+                  <TableColumn fx:id="modelCol" prefWidth="70.5" text="Model" />
+                  <TableColumn fx:id="mileageCol" prefWidth="95.5" text="Mileage" />
+                  <TableColumn fx:id="engineCol" prefWidth="90.5" text="Engine Size" />
+                  <TableColumn fx:id="fuelCol" prefWidth="81.0" text="Fuel Type" />
+                  <TableColumn fx:id="colourCol" prefWidth="79.0" text="Colour" />
+                  <TableColumn fx:id="motCol" prefWidth="79.0" text="MOT Date" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="3.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Button fx:id="viewVehicleRecord" mnemonicParsing="false" onAction="#vehicleRecord" prefHeight="25.0" prefWidth="141.0" text="View Vehicle Record">
+                     <HBox.margin>
+                        <Insets left="360.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="viewPartsButon" layoutX="520.0" layoutY="10.0" mnemonicParsing="false" onAction="#InstalledParts" prefHeight="25.0" prefWidth="141.0" text="View Parts Installed">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="100.0" text="Close">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

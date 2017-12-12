@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.gui.InstalledController">
+   <children>
+      <BorderPane layoutY="59.0">
+         <right>
+            <VBox prefHeight="328.0" prefWidth="308.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="406.0" prefWidth="282.0">
+                     <children>
+                        <VBox prefHeight="323.0" prefWidth="201.0">
+                           <children>
+                              <Label prefHeight="35.0" prefWidth="171.0" text="Record Details:">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Customer ID:">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="27.0" prefWidth="137.0" text="Customer Name:">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Vehicle ID:">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Booking ID:">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Booking Type:">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Booking Date:">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Installation Date:">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Warranty Date:">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="349.0" prefWidth="134.0">
+                           <children>
+                              <Label fx:id="custID" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="custName" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="vehicleID" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="bookingID" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="bookingType" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="bookingDate" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="installDate" prefHeight="21.0" prefWidth="134.0">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="warrantyDate" prefHeight="21.0" prefWidth="195.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <VBox prefHeight="163.0" prefWidth="711.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="711.0">
+                     <children>
+                        <Label fx:id="errors" prefHeight="27.0" prefWidth="392.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button fx:id="moreInfoBttn" mnemonicParsing="false" onAction="#handleMoreInfo" prefHeight="39.0" prefWidth="137.0" text="More Details">
+                           <HBox.margin>
+                              <Insets left="70.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="0.0" prefWidth="711.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddButtonAction" prefWidth="100.0" text="Add">
+                           <HBox.margin>
+                              <Insets left="190.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="editButton" mnemonicParsing="false" onAction="#handleEditButtonAction" prefWidth="100.0" text="Edit">
+                           <HBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefWidth="100.0" text="Delete">
+                           <HBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="closeBttn" mnemonicParsing="false" onAction="#handleCancelButton" text="Close">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="325.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </bottom>
+         <center>
+            <TableView fx:id="installedTable" prefHeight="323.0" prefWidth="398.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="84.0" text="Name" />
+                  <TableColumn fx:id="descriptionCol" prefWidth="114.0" text="Description" />
+                  <TableColumn fx:id="costCol" prefWidth="81.0" text="Price" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+      </BorderPane>
+      <HBox prefHeight="60.0" prefWidth="663.0">
+         <children>
+            <Label text="Parts installed :">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#handleRefreshButtonAction" text="Refresh">
+               <HBox.margin>
+                  <Insets left="350.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+/*
+Good place to choose colours from: https://www.materialui.co/colors
+*/
+
+.bold {
+    -fx-text-fill: #283593;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+.buttonUI {
+    -fx-background-color: #1565C0;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.button:hover {
+    -fx-background-color: #42a5f5;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 2, 0.0 , 0 , 1 );
+    -fx-cursor: hand;
+}
+
+.button:pressed {
+    -fx-background-color: #42a5f5;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 3, 0.0 , 0 , 2 );
+    -fx-cursor: hand;
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.ViewBillsScreenController">
+   <children>
+      <VBox layoutX="51.0" prefHeight="437.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Customer Bills">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="customerNameLabel" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="550.0" textFill="#484848" wrapText="true">
+               <VBox.margin>
+                  <Insets left="20.0" right="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="billsTable" prefHeight="325.0" prefWidth="660.0">
+                <placeholder>
+                                <Label text="There are no bills associated to this customer." />
+                </placeholder>
+              <columns>
+                <TableColumn fx:id="bookingTypeCol" prefWidth="89.0" text="Booking Type" />
+                <TableColumn fx:id="dateCol" prefWidth="70.66667175292969" text="Date" />
+                  <TableColumn fx:id="vehicleRegCol" prefWidth="105.66665649414062" text="Vehicle Reg. No" />
+                  <TableColumn fx:id="costCol" prefWidth="261.3333435058594" text="Cost">
+                     <columns>
+                        <TableColumn fx:id="mechanicCostCol" prefWidth="60.0" text="Mechanic" />
+                        <TableColumn fx:id="partsCostCol" prefWidth="60.0" text="Parts" />
+                        <TableColumn fx:id="spcCostCol" prefWidth="60.0" text="SPC" />
+                     </columns></TableColumn>
+                  <TableColumn fx:id="totalCostCol" prefWidth="87.0" text="Total Cost" />
+                  <TableColumn fx:id="settledCol" prefWidth="124.0" text="Settlement Status" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="3.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="28.0" prefWidth="700.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#changeSettlemetStatus" prefHeight="25.0" prefWidth="170.0" text="Change Settlement Status">
+                     <HBox.margin>
+                        <Insets left="380.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="100.0" text="Close">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

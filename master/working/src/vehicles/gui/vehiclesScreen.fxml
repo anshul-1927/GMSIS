@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="801.0" prefWidth="1280.0" styleClass="mainBackground" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicles.gui.VehiclesScreenController">
+   <children>
+      <TextField fx:id="searchField" layoutX="20.0" layoutY="12.0" prefHeight="27.0" prefWidth="704.0" promptText="Search Vehicle" />
+      <Button layoutX="960.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="146.0" styleClass="searchField" text="SEARCH" />
+      <TableView fx:id="vehicleTable" layoutX="14.0" layoutY="92.0" prefHeight="533.0" prefWidth="1101.0">
+        <columns>
+            <TableColumn fx:id="colVehicleType" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="colRegNum" prefWidth="109.0" styleClass="colRegNum" text="Reg. Num." />
+            <TableColumn fx:id="colVehMake" prefWidth="111.0" text="Make" />
+          <TableColumn fx:id="colModel" prefWidth="96.0" text="Model" />
+            <TableColumn fx:id="colMileage" prefWidth="102.0" text="Mileage" />
+            <TableColumn fx:id="colLastService" prefWidth="131.0" text="Last Service" />
+            <TableColumn prefWidth="220.0" text="Customer ">
+               <columns>
+                  <TableColumn fx:id="colName" prefWidth="108.0" text="Name" />
+                  <TableColumn fx:id="colLastName" prefWidth="116.0" text="Surname" />
+               </columns>
+            </TableColumn>
+            <TableColumn maxWidth="346.0" minWidth="-1.0" prefWidth="252.0" text="Next Booking">
+               <columns>
+                  <TableColumn fx:id="colNextBookingDate" prefWidth="139.0" text="Date" />
+                  <TableColumn fx:id="colBookingType" maxWidth="1.7976931348623157E308" prefWidth="113.0" text="Type" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button layoutX="1127.0" layoutY="389.0" mnemonicParsing="false" onAction="#addVehicle" prefHeight="51.0" prefWidth="146.0" styleClass="viewButton" text="ADD" />
+      <Button layoutX="1127.0" layoutY="572.0" mnemonicParsing="false" onAction="#delete" prefHeight="51.0" prefWidth="146.0" styleClass="viewButton" text="DELETE" />
+      <Label layoutX="839.0" layoutY="174.0" />
+      <ChoiceBox fx:id="searchOpt" layoutX="762.0" layoutY="12.0" prefHeight="27.0" prefWidth="171.0" />
+      <Button layoutX="1127.0" layoutY="482.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="51.0" prefWidth="146.0" styleClass="viewButton" text="EDIT" />
+      <Label layoutX="1120.0" layoutY="85.0" prefHeight="30.0" prefWidth="171.0" text="BOOKINGS &amp; PARTS" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1121.0" layoutY="106.0" prefHeight="17.0" prefWidth="154.0" />
+      <Button fx:id="bookings" layoutX="1128.0" layoutY="129.0" mnemonicParsing="false" onAction="#handleVehicleBookings" prefHeight="51.0" prefWidth="146.0" styleClass="bookingsParts" text="BOOKINGS &amp; PARTS" />
+      <Label layoutX="24.0" layoutY="50.0" prefHeight="27.0" prefWidth="213.0" text="VIEW VEHICLES BY:" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1129.0" layoutY="235.0" prefHeight="17.0" prefWidth="137.0" />
+      <Label layoutX="1127.0" layoutY="216.0" prefHeight="30.0" prefWidth="137.0" text="VEHICLE DETAILS" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="1127.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleVehicleDetails" prefHeight="51.0" prefWidth="146.0" styleClass="viewButton" text="VEHICLE DETAILS" />
+      <RadioButton fx:id="car" layoutX="365.0" layoutY="55.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="87.0" text="Car">
+         <font>
+            <Font size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="truck" layoutX="487.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Truck">
+         <font>
+            <Font size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="van" layoutX="621.0" layoutY="55.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="85.0" text="Van">
+         <font>
+            <Font size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="all" layoutX="260.0" layoutY="55.0" mnemonicParsing="false" text="All">
+         <font>
+            <Font size="15.0" />
+         </font></RadioButton>
+      <Separator layoutX="1130.0" layoutY="342.0" prefHeight="17.0" prefWidth="137.0" />
+      <ComboBox fx:id="vehicleTemplateDropDownList" layoutX="762.0" layoutY="52.0" prefHeight="27.0" prefWidth="171.0" promptText="Vehicle Template" />
+      <Button fx:id="resetButton" layoutX="1125.0" layoutY="11.0" mnemonicParsing="false" onAction="#allVehicles" prefHeight="51.0" prefWidth="146.0" styleClass="resetButton" text="All Vehicles / Reset" />
+   </children>
+   <stylesheets>
+   <URL value="@../../common/DefaultTheme.css" />
+   <URL value="@VehiclesScreen.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.gui.EditStockController">
+   <children>
+      <Label layoutX="65.0" layoutY="88.0" prefHeight="27.0" prefWidth="120.0" text="ID" />
+      <Label layoutX="65.0" layoutY="138.0" text="Name" />
+      <Label layoutX="65.0" layoutY="188.0" text="Description" />
+      <Label layoutX="65.0" layoutY="268.0" text="Quantity" />
+      <Button fx:id="confirmButton" alignment="CENTER" layoutX="172.0" layoutY="433.0" mnemonicParsing="false" onAction="#handleConfirmButtonAction" prefWidth="200.0" text="Confirm" />
+      <Button fx:id="cancelButton" alignment="CENTER" layoutX="222.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefWidth="100.0" text="Cancel" />
+      <TextField fx:id="partID" layoutX="173.0" layoutY="83.0" prefHeight="39.0" prefWidth="321.0" />
+      <TextField fx:id="partName" layoutX="173.0" layoutY="133.0" prefHeight="39.0" prefWidth="321.0" />     
+      <TextField fx:id="partQuantity" layoutX="173.0" layoutY="263.0" prefHeight="39.0" prefWidth="321.0" />
+      <TextArea fx:id="partDescription" layoutX="173.0" layoutY="183.0" prefHeight="70.0" prefWidth="321.0" />
+      <TextField fx:id="partCost" layoutX="173.0" layoutY="322.0" prefHeight="39.0" prefWidth="321.0" />
+      <Label layoutX="65.0" layoutY="328.0" prefHeight="27.0" prefWidth="76.0" text="Cost" />
+      <Label layoutX="202.0" layoutY="14.0" text="Edit Item" textFill="#f20a0a">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="94.0" layoutY="64.0" prefHeight="7.0" prefWidth="370.0" />
+      <Separator layoutX="172.0" layoutY="380.0" prefWidth="200.0" />
+      <Label fx:id="errors" layoutX="67.0" layoutY="396.0" prefHeight="27.0" prefWidth="423.0" textFill="#f80808">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

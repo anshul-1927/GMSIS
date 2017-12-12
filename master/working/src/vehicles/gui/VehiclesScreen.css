@@ -1,0 +1,50 @@
+/*
+Good place to choose colours from: https://www.materialui.co/colors
+*/
+
+.viewLabel {
+     -fx-text-fill: #283593;
+}
+
+.radio-button {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+.radio-button.AddVehicle {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.searchField {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-color: #a9a9a9;
+    -fx-text-fill: #000000;
+}
+
+.resetButton {
+    -fx-background-color: #a10000;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.viewButton {
+    -fx-background-color: #1E88E5;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.bookingsParts {
+    -fx-background-color: #1E88E5;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+
+
+.colRegNum{
+    -fx-font-weight: bold;
+
+    
+}

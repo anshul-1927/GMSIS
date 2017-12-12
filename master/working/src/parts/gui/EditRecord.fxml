@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="655.0" maxWidth="754.0" minHeight="312.0" minWidth="591.0" prefHeight="312.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.gui.EditRecordController">
+   <children>
+      <Label alignment="CENTER" layoutX="179.0" layoutY="14.0" prefHeight="68.0" prefWidth="234.0" text="Edit Record" textFill="#f80b0b">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="120.0" text="Part" />
+      <Button fx:id="editRecordButton" layoutX="231.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleConfirmButton" prefHeight="39.0" prefWidth="130.0" text="Confrim" />
+      <Button fx:id="cancelButton" layoutX="265.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleCancelButton" text="Cancel" />
+      <ComboBox fx:id="partBox" layoutX="290.0" layoutY="114.0" prefHeight="39.0" prefWidth="210.0" promptText="Select Part" />
+      <Separator layoutX="97.0" layoutY="77.0" prefHeight="10.0" prefWidth="412.0" />
+      <Separator layoutX="164.0" layoutY="190.0" prefHeight="4.0" prefWidth="252.0" />
+      <Label fx:id="errors" layoutX="123.0" layoutY="275.0" prefHeight="27.0" prefWidth="373.0" textFill="#f50606">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

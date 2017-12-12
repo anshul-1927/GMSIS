@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.gui.DetailsScreenController">
+   <children>
+      <Label layoutX="175.0" layoutY="14.0" text="Specialist Repair Details" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="67.0" text="Customer" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="264.0" text="Vehicle" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="434.0" layoutY="71.0" text="SPC" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeButton" layoutX="286.0" layoutY="499.0" mnemonicParsing="false" onAction="#closeWindow" text="Close">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="435.0" layoutY="264.0" text="Part" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="111.0" text="First Name" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="129.0" text="Last Name" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="147.0" text="Type" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="165.0" text="Address" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="187.0" text="Post Code" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="205.0" text="Phone No" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="223.0" text="Email" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="413.0" text="Fuel Type" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="3.0" layoutY="395.0" text="Engine Size" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="377.0" text="Mileage" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="359.0" text="Make" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="339.0" text="Model" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="321.0" text="Type" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="303.0" text="Reg No" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="431.0" text="Colour" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="449.0" text="MoT Date" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="380.0" layoutY="223.0" text="Cost" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="332.0" layoutY="205.0" text="Return Date" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="322.0" layoutY="187.0" text="Delivery Date" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="375.0" layoutY="169.0" text="Email" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="151.0" text="Phone No" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="355.0" layoutY="133.0" text="Address" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="115.0" text="Name" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="376.0" layoutY="302.0" text="Name" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="339.0" layoutY="320.0" text="Description" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="67.0" layoutY="499.0" mnemonicParsing="false" onAction="#editSpecialist" prefHeight="35.0" prefWidth="79.0" text="Edit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="481.0" layoutY="499.0" mnemonicParsing="false" onAction="#deleteSpecialist" text="Delete">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="cFNameLabel" layoutX="95.0" layoutY="111.0" prefHeight="18.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cLNameLabel" layoutX="95.0" layoutY="129.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cTypeLabel" layoutX="95.0" layoutY="147.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cAddressLabel" layoutX="95.0" layoutY="165.0" maxWidth="220.0" prefHeight="18.0" prefWidth="200.0" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cPCodeLabel" layoutX="94.0" layoutY="187.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cPNoLabel" layoutX="94.0" layoutY="205.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cEmailLabel" layoutX="94.0" layoutY="223.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sCostLabel" layoutX="420.0" layoutY="223.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sRDateLabel" layoutX="420.0" layoutY="205.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sDDateLabel" layoutX="420.0" layoutY="187.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sEmailLabel" layoutX="420.0" layoutY="169.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sPNoLabel" layoutX="420.0" layoutY="151.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sAddressLabel" layoutX="420.0" layoutY="133.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="sNameLabel" layoutX="420.0" layoutY="115.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vFTypeLabel" layoutX="89.0" layoutY="413.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vESizeLabel" layoutX="89.0" layoutY="395.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vMileageLabel" layoutX="89.0" layoutY="377.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vMakeLabel" layoutX="89.0" layoutY="359.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vModelLabel" layoutX="89.0" layoutY="341.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vTypeLabel" layoutX="89.0" layoutY="321.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vRegNoLabel" layoutX="89.0" layoutY="305.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vColourLabel" layoutX="89.0" layoutY="431.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="vMoTLabel" layoutX="89.0" layoutY="449.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pNameLabel" layoutX="425.0" layoutY="302.0" prefWidth="200.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="pDescBox" editable="false" layoutX="425.0" layoutY="324.0" maxWidth="200.0" prefHeight="138.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

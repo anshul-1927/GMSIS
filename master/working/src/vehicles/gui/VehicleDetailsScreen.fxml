@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="676.0" stylesheets="@VehiclesScreen.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicles.gui.VehicleDetailsScreenController">
+   <children>
+      <Label layoutX="213.0" layoutY="23.0" prefHeight="31.0" prefWidth="255.0" text="Vehicle Information" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="87.0" prefHeight="27.0" prefWidth="169.0" text="Customer Details" textFill="#141313">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="custEmail" layoutX="166.0" layoutY="212.0" text="Label" />
+      <Label fx:id="custMobile" layoutX="166.0" layoutY="191.0" text="Label" />
+      <Label layoutX="84.0" layoutY="212.0" text="Email:" />
+      <Label layoutX="84.0" layoutY="191.0" text="Telephone:" />
+      <Label fx:id="custPost" layoutX="166.0" layoutY="170.0" text="Label" />
+      <Label fx:id="custAddress" layoutX="166.0" layoutY="149.0" text="Label" />
+      <Label fx:id="custName" layoutX="166.0" layoutY="128.0" text="Label" />
+      <Label layoutX="84.0" layoutY="170.0" text="Postcode:" />
+      <Label layoutX="84.0" layoutY="149.0" text="Address:" />
+      <Label layoutX="84.0" layoutY="128.0" text="Full Name:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="446.0" layoutY="87.0" prefHeight="27.0" prefWidth="169.0" text="Vehicle Details" textFill="#171717">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="fuel" layoutX="536.0" layoutY="212.0" text="Label" />
+      <Label fx:id="make" layoutX="536.0" layoutY="191.0" text="Label" />
+      <Label layoutX="452.0" layoutY="212.0" text="Fuel:" />
+      <Label layoutX="451.0" layoutY="191.0" text="Make:" />
+      <Label fx:id="model" layoutX="535.0" layoutY="170.0" text="Label" />
+      <Label fx:id="type" layoutX="535.0" layoutY="128.0" text="Label" />
+      <Label layoutX="451.0" layoutY="170.0" text="Model:" />
+      <Label layoutX="451.0" layoutY="149.0" text="RegNum:" />
+      <Label layoutX="451.0" layoutY="128.0" text="Type:" />
+      <Label layoutX="453.0" layoutY="290.0" text="MoT:" />
+      <Label layoutX="452.0" layoutY="271.0" text="Mileage:" />
+      <Label layoutX="452.0" layoutY="252.0" text="Engine:" />
+      <Label layoutX="452.0" layoutY="231.0" text="Color:" />
+      <Label layoutX="452.0" layoutY="310.0" text="Last Service:" />
+      <Label fx:id="MoT" layoutX="540.0" layoutY="290.0" text="Label" />
+      <Label fx:id="lastS" layoutX="540.0" layoutY="311.0" text="Label" />
+      <Label fx:id="mileage" layoutX="539.0" layoutY="271.0" text="Label" />
+      <Label fx:id="color" layoutX="537.0" layoutY="231.0" text="Label" />
+      <Label fx:id="eng" layoutX="538.0" layoutY="250.0" text="Label" />
+      <Label layoutX="75.0" layoutY="247.0" prefHeight="27.0" prefWidth="169.0" text="Waranty Details" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="expDate" layoutX="163.0" layoutY="331.0" text="Label" />
+      <Label fx:id="address" layoutX="163.0" layoutY="310.0" text="Label" />
+      <Label fx:id="company" layoutX="163.0" layoutY="289.0" text="Label" />
+      <Label layoutX="81.0" layoutY="331.0" text="Expiry Date:" />
+      <Label layoutX="81.0" layoutY="310.0" text="Address:" />
+      <Label layoutX="81.0" layoutY="289.0" text="Company:" />
+      <Label fx:id="regNum" layoutX="535.0" layoutY="149.0" text="Label" />
+      <Button fx:id="exit" layoutX="287.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="46.0" prefWidth="94.0" styleClass="viewButton" text="EXIT" />
+   </children>
+</AnchorPane>

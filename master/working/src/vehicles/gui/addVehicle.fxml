@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="710.0" stylesheets="@VehiclesScreen.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicles.gui.AddVehicleController">
+   <children>
+      <Label layoutX="224.0" layoutY="20.0" prefHeight="27.0" prefWidth="213.0" text="Add New Vehicle" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="customerDropDownList" layoutX="55.0" layoutY="80.0" prefHeight="25.0" prefWidth="234.0" promptText="Customer" />
+      <ComboBox fx:id="vehicleTypeDropDownList" layoutX="56.0" layoutY="142.0" prefHeight="25.0" prefWidth="234.0" promptText="Vehicle Type" />
+      <TextField fx:id="modelFieldAdd" layoutX="56.0" layoutY="173.0" prefHeight="27.0" prefWidth="234.0" promptText="Model" />
+      <TextField fx:id="regNumberFieldAdd" layoutX="55.0" layoutY="204.0" prefHeight="27.0" prefWidth="234.0" promptText="Registration Number" />
+      <TextField fx:id="manufacturerFieldAdd" layoutX="56.0" layoutY="233.0" prefHeight="27.0" prefWidth="234.0" promptText="Manufacturer" />
+      <TextField fx:id="engineSizeFieldAdd" layoutX="56.0" layoutY="263.0" prefHeight="27.0" prefWidth="234.0" promptText="Engine Size" />
+      <TextField fx:id="fuelTypeFieldAdd" layoutX="56.0" layoutY="293.0" prefHeight="27.0" prefWidth="234.0" promptText="Fuel Type" />
+      <TextField fx:id="colourFieldAdd" layoutX="56.0" layoutY="324.0" prefHeight="27.0" prefWidth="234.0" promptText="Colour" />
+      <TextField fx:id="mileageFieldAdd" layoutX="55.0" layoutY="386.0" prefHeight="27.0" prefWidth="234.0" promptText="Mileage" />
+      <ComboBox fx:id="vehicleTemplateDropDownList" layoutX="56.0" layoutY="110.0" prefHeight="25.0" prefWidth="234.0" promptText="Vehicle Templates" />
+      <DatePicker fx:id="MoTFieldAdd" layoutX="56.0" layoutY="355.0" prefHeight="27.0" prefWidth="234.0" promptText="MoT" />
+      <TextField fx:id="warantyCompanyField" layoutX="392.0" layoutY="115.0" prefHeight="27.0" prefWidth="234.0" promptText="Waranty Company" />
+      <TextField fx:id="warantyAddressField" layoutX="392.0" layoutY="151.0" prefHeight="27.0" prefWidth="234.0" promptText="Waranty Address" />
+      <DatePicker fx:id="warantyExpDateField" layoutX="392.0" layoutY="187.0" prefHeight="27.0" prefWidth="234.0" promptText="Exp. Date: " />
+      <RadioButton fx:id="uWarranty" layoutX="533.0" layoutY="80.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="144.0" styleClass="AddVehicle" text="Under Warranty" />
+      <RadioButton fx:id="wWarranty" layoutX="364.0" layoutY="80.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="157.0" styleClass="AddVehicle" text="Without Warranty" />
+      <Button layoutX="456.0" layoutY="230.0" mnemonicParsing="false" onAction="#addVehicle" prefHeight="52.0" prefWidth="113.0" styleClass="viewButton" text="Add" />
+      <Button layoutX="456.0" layoutY="295.0" mnemonicParsing="false" onAction="#clearAddFields" prefHeight="52.0" prefWidth="113.0" styleClass="viewButton" text="Clear" />
+      <Button fx:id="exit" layoutX="456.0" layoutY="357.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="52.0" prefWidth="113.0" styleClass="viewButton" text="Exit" />
+   </children>
+</AnchorPane>

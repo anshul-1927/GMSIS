@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="mainBackground" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagrep.gui.DiagrepScreenController">
+   <children>
+      <TextField fx:id="searchField" layoutX="27.0" layoutY="28.0" prefHeight="31.0" prefWidth="643.0" promptText="Please enter a term and a filter to search for:" />
+      <ChoiceBox fx:id="searchOptions" layoutX="682.0" layoutY="28.0" prefHeight="31.0" prefWidth="190.0" />
+      <Button fx:id="searchButton" alignment="CENTER" contentDisplay="CENTER" layoutX="884.0" layoutY="28.0" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="190.0" styleClass="searchButton" text="SEARCH" />
+      <Button layoutX="1095.0" layoutY="28.0" mnemonicParsing="false" onAction="#reset" prefHeight="70.0" prefWidth="164.0" styleClass="resetButton" stylesheets="@../../common/DefaultTheme.css" text="All Bookings / Reset" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Separator layoutX="1092.0" layoutY="113.0" prefHeight="0.0" prefWidth="170.0" />
+      <Button layoutX="1095.0" layoutY="228.0" mnemonicParsing="false" onAction="#addEntry" prefHeight="70.0" prefWidth="164.0" styleClass="coreButton" text="Add Booking" />
+      <Button layoutX="1095.0" layoutY="316.0" mnemonicParsing="false" onAction="#editEntry" prefHeight="70.0" prefWidth="164.0" styleClass="coreButton" text="Edit Booking" />
+      <Button layoutX="1095.0" layoutY="403.0" mnemonicParsing="false" onAction="#deleteEntry" prefHeight="70.0" prefWidth="164.0" styleClass="coreButton" text="Delete Booking" />
+      <Button layoutX="1095.0" layoutY="595.0" mnemonicParsing="false" onAction="#displayRegistry" prefHeight="70.0" prefWidth="164.0" styleClass="extraButton" text="Mechanics" />
+      <TableView fx:id="diagrepTable" layoutX="27.0" layoutY="118.0" prefHeight="547.0" prefWidth="1048.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="45.0" styleClass="idCol" text="ID" />
+            <TableColumn fx:id="colType" prefWidth="104.0" styleClass="coreCol" text="Type" />
+          <TableColumn fx:id="colDate" prefWidth="135.0" styleClass="coreCol" text="Date" />
+            <TableColumn fx:id="colDuration" prefWidth="75.0" styleClass="coreCol" text="Duration" />
+            <TableColumn fx:id="colVeh" prefWidth="325.0" styleClass="vehicleCol" text="Vehicle">
+               <columns>
+                  <TableColumn fx:id="colVehReg" prefWidth="95.0" styleClass="idCol" text="Reg. No." />
+                  <TableColumn fx:id="colVehManufacturer" prefWidth="120.0" text="Manufacturer" />
+                  <TableColumn fx:id="colVehMileage" prefWidth="100.0" text="Mileage" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="colCust" prefWidth="397.0" styleClass="customerCol" text="Customer">
+               <columns>
+                  <TableColumn fx:id="colCustID" prefWidth="40.0" styleClass="idCol" text="ID" />
+                  <TableColumn fx:id="colCustfirstName" prefWidth="100.0" text="First" />
+                  <TableColumn fx:id="colCustlastName" prefWidth="100.0" text="Last" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="colMech" prefWidth="96.0" text="Mechanic">
+               <columns>
+                  <TableColumn fx:id="colMechID" prefWidth="40.0" styleClass="idCol" text="ID" />
+                  <TableColumn fx:id="colMechDuration" prefWidth="75.0" text="Duration" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="71.0" styleClass="viewLabel" stylesheets="@../../common/DefaultTheme.css" text="VIEW BOOKINGS BY:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="radioAll" layoutX="290.0" layoutY="76.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="66.0" text="All" />
+      <RadioButton fx:id="radioHourly" layoutX="665.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Hourly" />
+      <RadioButton fx:id="radioDaily" layoutX="790.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Daily" />
+      <RadioButton fx:id="radioMonthly" layoutX="915.0" layoutY="76.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Monthly" />
+      <RadioButton fx:id="radioPast" layoutX="415.0" layoutY="76.0" mnemonicParsing="false" onAction="#displayPastBookings" text="Past" />
+      <RadioButton fx:id="radioFuture" layoutX="540.0" layoutY="76.0" mnemonicParsing="false" onAction="#displayFutureBookings" text="Future" />
+      <Button layoutX="1095.0" layoutY="127.0" mnemonicParsing="false" onAction="#viewEntry" prefHeight="70.0" prefWidth="164.0" styleClass="viewButton" text="View Details" />
+      <Separator layoutX="1092.0" layoutY="212.0" prefHeight="0.0" prefWidth="170.0" />
+      <Separator layoutX="1092.0" layoutY="490.0" prefHeight="0.0" prefWidth="170.0" />
+      <Button layoutX="1095.0" layoutY="510.0" mnemonicParsing="false" onAction="#displayHolidays" prefHeight="70.0" prefWidth="164.0" styleClass="extraButton" text="Holidays" />
+   </children>
+   <stylesheets>
+      <URL value="@../../common/DefaultTheme.css" />
+      <URL value="@diagrepScreen.css" />
+   </stylesheets>
+</AnchorPane>

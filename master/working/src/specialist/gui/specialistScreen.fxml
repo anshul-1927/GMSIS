@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="mainBackground" stylesheets="@../../common/DefaultTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.gui.SpecialistScreenController">
+   <children>
+      <TextField fx:id="tableFilter" layoutX="27.0" layoutY="26.0" onKeyReleased="#fillTable" prefHeight="27.0" prefWidth="463.0" promptText="-Filter Table by Customer First/Last Name, Vehicle Registration Number-" />
+      <Button layoutX="1079.0" layoutY="102.0" mnemonicParsing="false" onAction="#addSpecialist" prefHeight="75.0" prefWidth="164.0" text="Add Specialist Repair" />
+      <Button layoutX="1079.0" layoutY="202.0" mnemonicParsing="false" onAction="#editSpecialist" prefHeight="75.0" prefWidth="164.0" text="Edit Specialist Repair" />
+      <Button layoutX="1079.0" layoutY="302.0" mnemonicParsing="false" onAction="#deleteSpecialist" prefHeight="75.0" prefWidth="164.0" text="Delete Specialist Repair" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="27.0" layoutY="66.0" prefHeight="588.0" prefWidth="1025.0" vbarPolicy="ALWAYS">
+         <content>
+            <TableView fx:id="table" prefHeight="587.0" prefWidth="1010.0">
+              <columns>
+                <TableColumn prefWidth="300.0" text="Customer">
+                     <columns>
+                        <TableColumn fx:id="cFNameCol" prefWidth="125.0" text="First Name" />
+                        <TableColumn fx:id="cLNameCol" prefWidth="125.0" text="Last Name" />
+                     </columns>
+                  </TableColumn>
+                <TableColumn prefWidth="157.0" text="Vehicle">
+                     <columns>
+                        <TableColumn fx:id="vRegCol" prefWidth="125.0" text="Reg. No." />
+                        <TableColumn fx:id="vMakeCol" prefWidth="100.0" text="Make" />
+                        <TableColumn fx:id="vModelCol" prefWidth="100.0" text="Model" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="partNameCol" prefWidth="97.0" text="Part (if any)" />
+                  <TableColumn fx:id="spcNameCol" prefWidth="109.0" text="SPC" />
+                  <TableColumn fx:id="dDateCol" prefWidth="113.0" text="Delivery Date" />
+                  <TableColumn fx:id="rDateCol" prefWidth="112.0" text="Return Date" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button layoutX="1079.0" layoutY="19.0" mnemonicParsing="false" onAction="#refreshPage" prefHeight="65.0" prefWidth="164.0" text="Refresh" />
+      <CheckBox fx:id="isOutstanding" layoutX="724.0" layoutY="17.0" mnemonicParsing="false" onAction="#isOutstandingSelected" text="Show Outstanding Repairs" />
+      <Button layoutX="1079.0" layoutY="402.0" mnemonicParsing="false" onAction="#moreDetails" prefHeight="75.0" prefWidth="164.0" text="More Detail's" />
+      <CheckBox fx:id="isReturned" layoutX="724.0" layoutY="42.0" mnemonicParsing="false" onAction="#isReturnedSelected" text="Show Returned Repairs" />
+      <CheckBox fx:id="isVehicle" layoutX="933.0" layoutY="17.0" mnemonicParsing="false" onAction="#isVehicleSelected" text="Show Vehicles" />
+      <CheckBox fx:id="isPart" layoutX="933.0" layoutY="42.0" mnemonicParsing="false" onAction="#isPartSelected" text="Show Parts" />
+      <ComboBox fx:id="spcChoice" layoutX="498.0" layoutY="26.0" onAction="#fillTable" prefHeight="27.0" prefWidth="212.0" promptText="-Select SPC-" />
+      <Button layoutX="1079.0" layoutY="624.0" mnemonicParsing="false" onAction="#showSPCs" prefHeight="75.0" prefWidth="164.0" text="SPC's" />
+      <Button layoutX="1079.0" layoutY="498.0" mnemonicParsing="false" onAction="#showBill" prefHeight="75.0" prefWidth="164.0" text="Show Bill" />
+   </children>
+</AnchorPane>

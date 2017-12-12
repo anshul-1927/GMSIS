@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.gui.DeliveryController">
+   <children>
+      <Label layoutX="180.0" layoutY="26.0" text="Item Delivery" textFill="#2605eb">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="104.0" text="Part ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="166.0" text="Quantity received">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTf" layoutX="239.0" layoutY="102.0" />
+      <TextField fx:id="quantityTf" layoutX="239.0" layoutY="164.0" />
+      <Button fx:id="confirmButton" layoutX="165.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleConfirmButton" prefWidth="80.0" text="Confirm" />
+      <Button fx:id="cancelButton" layoutX="268.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleCancelButton" prefWidth="80.0" text="Cancel" />
+   </children>
+</AnchorPane>

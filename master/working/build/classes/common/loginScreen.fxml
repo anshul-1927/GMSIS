@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@DefaultTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common.LoginScreenController">
+   <children>
+      <Button fx:id="loginButton" layoutX="264.0" layoutY="311.0" mnemonicParsing="false" onAction="#login" text="Login">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="154.0" layoutY="218.0" text="User:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="252.0" text="Password:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userField" layoutX="212.0" layoutY="214.0" prefHeight="31.0" prefWidth="270.0" />
+      <Label fx:id="errorMessage" layoutX="238.0" layoutY="179.0" prefHeight="21.0" prefWidth="197.0" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="212.0" layoutY="249.0" prefHeight="31.0" prefWidth="270.0" />
+      <Label layoutX="205.0" layoutY="43.0" styleClass="bold" text="SE2 GM-SIS" textFill="#9a0000">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="94.0" text="Garage Management System">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+/*
+Good place to choose colours from: https://www.materialui.co/colors
+*/
+
+.viewLabel {
+     -fx-text-fill: #283593;
+}
+
+.radio-button {
+    -fx-font-weight: bold;
+    -fx-font-size: 17.5px;
+}
+
+.searchButton {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.resetButton {
+    -fx-background-color: #a10000;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #42a5f5;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 2, 0.0 , 0 , 1 );
+    -fx-cursor: hand;
+}
+
+.button:pressed {
+    -fx-background-color: #42a5f5;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 3, 0.0 , 0 , 2 );
+    -fx-cursor: hand;
+}
+
+.resetButton:hover {
+    -fx-background-color: #c62828;
+}
+
+.viewButton {
+    -fx-background-color: #1565C0;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.coreButton {
+    -fx-background-color: #1565C0;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.extraButton {
+    -fx-background-color: #1565C0;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+
+
+/*.resetButton {
+    -fx-text-fill: #a10000;
+    -fx-font-weight: bold;
+}
+
+.viewButton {
+    -fx-text-fill: #1E88E5;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.coreButton {
+    -fx-text-fill: #1976D2;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.extraButton {
+    -fx-text-fill: #1565C0;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}*/
+
+.table-cell.idCol{
+    -fx-font-weight: bold;
+}
+
+/*.table-cell.coreCol{
+    -fx-background-color: #BBDEFB;
+}*/
+ 
+/*.table-view .column-header.coreCol {
+    -fx-base: #1565C0;
+}*/

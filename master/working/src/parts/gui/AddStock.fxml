@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.gui.AddStockController">
+   <children>
+      <Label layoutX="50.0" layoutY="140.0" text="Name" />
+      <Label layoutX="50.0" layoutY="179.0" text="Description" />
+      <Label layoutX="50.0" layoutY="262.0" text="Quantity" />
+      <Button fx:id="addRecordButton" alignment="CENTER" layoutX="180.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleAddRecordButtonAction" prefWidth="200.0" text="Add Part" />
+      <Button fx:id="cancelButton" alignment="CENTER" layoutX="230.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleCancelButton" prefWidth="100.0" text="Close" />
+      <TextField fx:id="partName" layoutX="170.0" layoutY="134.0" prefHeight="39.0" prefWidth="312.0" />     
+      <TextField fx:id="partQuantity" layoutX="170.0" layoutY="256.0" prefHeight="39.0" prefWidth="312.0" />
+      <TextArea fx:id="partDescription" layoutX="170.0" layoutY="179.0" prefHeight="70.0" prefWidth="312.0" />
+      <Label layoutX="50.0" layoutY="308.0" prefHeight="27.0" prefWidth="69.0" text="Cost" />
+      <TextField fx:id="partCost" layoutX="170.0" layoutY="302.0" prefHeight="39.0" prefWidth="312.0" />
+      <Label alignment="CENTER" layoutX="174.0" layoutY="31.0" text="Add Stock Item" textFill="#4f0de0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutX="101.0" layoutY="110.0" prefHeight="3.0" prefWidth="378.0" />
+      <Separator layoutX="180.0" layoutY="359.0" prefWidth="200.0" />
+    </children>
+</AnchorPane>

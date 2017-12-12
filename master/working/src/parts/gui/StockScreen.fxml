@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="991.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.gui.StockScreenController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="608.0">
+         <top>
+            <Label text="Stock Items" textFill="#ff0f0f" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <HBox prefHeight="50.0" prefWidth="608.0">
+               <children>
+                  <Button fx:id="addButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleAddButton" prefWidth="90.0" text="Add">
+                     <HBox.margin>
+                        <Insets left="100.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="editButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleEditButton" prefWidth="90.0" text="Edit" />
+                  <Button fx:id="deleteButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleDeleteButton" prefWidth="90.0" text="Delete">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#handleRefreshButtonAction" prefWidth="90.0" text="Refresh">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <VBox prefHeight="496.0" prefWidth="608.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="errors" alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="598.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="partsTable" prefHeight="445.0" prefWidth="593.0">
+                    <columns>
+                      <TableColumn fx:id="idCol" prefWidth="50.0" resizable="false" text="ID" />
+                      <TableColumn fx:id="nameCol" prefWidth="90.0" resizable="false" text="Name" />
+                        <TableColumn fx:id="descriptionCol" prefWidth="300.0" resizable="false" text="Description" />
+                        <TableColumn fx:id="quantityCol" resizable="false" text="Quantity" />
+                        <TableColumn fx:id="costCol" prefWidth="72.0" resizable="false" text="Cost" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+      <Label layoutX="647.0" layoutY="68.0" text="Deliveries:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="647.0" layoutY="334.0" text="Withdrawals:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="deliveryTable" layoutX="647.0" layoutY="95.0" prefHeight="230.0" prefWidth="325.0">
+        <columns>
+            <TableColumn fx:id="dID" prefWidth="70.0" resizable="false" text="ID" />
+          <TableColumn fx:id="dDate" prefWidth="163.0" resizable="false" text="Date" />
+          <TableColumn fx:id="dQuantity" prefWidth="90.0" resizable="false" text="Quantity" />
+        </columns>
+      </TableView>
+      <Separator layoutX="620.0" layoutY="34.0" orientation="VERTICAL" prefHeight="532.0" prefWidth="9.0" />
+      <TableView fx:id="withdrawalTable" layoutX="647.0" layoutY="366.0" prefHeight="220.0" prefWidth="325.0">
+        <columns>
+            <TableColumn fx:id="wID" prefWidth="70.0" resizable="false" text="ID" />
+          <TableColumn fx:id="wDate" prefWidth="163.0" resizable="false" text="Date" />
+          <TableColumn fx:id="wQuantity" prefWidth="90.0" resizable="false" text="Quantity" />
+        </columns>
+      </TableView>
+      <Label layoutX="640.0" layoutY="7.0" text="Deliveries and Withdrawals:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="receiveButton" layoutX="727.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleReceiveButton" text="Receive Delivery" />
+   </children>
+</AnchorPane>

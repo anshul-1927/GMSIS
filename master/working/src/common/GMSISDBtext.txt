@@ -1,0 +1,126 @@
+CREATE TABLE `User` (
+	`UserID`	TEXT NOT NULL UNIQUE,
+	`UserFirstName`	TEXT NOT NULL,
+	`UserLastName`	TEXT NOT NULL,
+	`UserPassword`	TEXT NOT NULL,
+	`UserIsAdmin`	INTEGER NOT NULL,
+	PRIMARY KEY(`UserID`)
+);
+
+CREATE TABLE `Customer` (
+	`CustomerID`	INTEGER NOT NULL UNIQUE,
+	`CustomerFirstName`	TEXT NOT NULL,
+	`CustomerLastName`	TEXT NOT NULL,
+	`CustomerAddress`	TEXT NOT NULL,
+	`CustomerPostcode`	TEXT NOT NULL,
+	`CustomerPhoneNo`	TEXT NOT NULL,
+	`CustomerEmail`	TEXT NOT NULL,
+	PRIMARY KEY(`CustomerID`)
+);
+
+CREATE TABLE `Vehicle` (
+	`VehicleRegNo`	TEXT NOT NULL UNIQUE,
+	`VehicleModel`	TEXT NOT NULL,
+	`VehicleMake`	TEXT NOT NULL,
+	`VehicleEngSize`	TEXT NOT NULL,
+	`VehicleFuelType`	TEXT NOT NULL,
+	`VehicleColour`	TEXT NOT NULL,
+	`VehicleMoTDate`	TEXT NOT NULL,
+	`WarrantyID`	INTEGER,
+	`CustomerID`	INTEGER NOT NULL UNIQUE,
+  	FOREIGN KEY(CustomerID) REFERENCES Customer(CustomerID)
+	FOREIGN KEY(WarrantyID) REFERENCES WarrantyCompany(WarrantyID)
+	PRIMARY KEY(`VehicleRegNo`)
+);
+CREATE TABLE 'Vehicle_default_models' (
+        
+        model TEXT NOT NULL,
+        make TEXT NOT NULL,
+        EngSize TEXT NOT NULL,
+        FuelType TEXT NOT NULL
+
+)
+
+CREATE TABLE `WarrantyCompany` (
+	`WarrantyID`	INTEGER NOT NULL UNIQUE,
+	`WarrantyName`	TEXT NOT NULL,
+	`WarrantyAddress`	TEXT NOT NULL,
+	`WarrantyExpDate`	INTEGER NOT NULL,
+	PRIMARY KEY(`WarrantyID`)
+);
+
+CREATE TABLE `Part` (
+	`PartID`    INTEGER NOT NULL UNIQUE,
+	`PartName`	TEXT NOT NULL,
+	`PartDescription`	TEXT NOT NULL,
+	`PartQuantity`	INTEGER,
+	`VehicleID`	INTEGER,
+         Cost DOUBLE,
+	FOREIGN KEY(VehicleID) REFERENCES Vehicle(VehicleID)
+	PRIMARY KEY(`PartID`)
+);
+CREATE TABLE 'Parts_Installed' (
+        ID INTEGER PRIMARY KEY ASC,
+        VehicleID INTEGER NOT NULL,
+        PartID INTEGER NOT NULL,
+        BookingID INTEGER NOT NULL,
+       `PartInstalledDate`	INTEGER,
+        FOREIGN KEY(VehicleID) REFERENCES Vehicle(VehicleID),
+        FOREIGN KEY(PartID) REFERENCES Part(PartID),
+        FOREIGN KEY(BookingID) REFERENCES Booking(BookingID)
+        
+);
+
+CREATE TABLE `SpecialistRepair` (
+	`SRID`	INTEGER NOT NULL UNIQUE,
+	`SRReturnDate`	TEXT NOT NULL,
+	`SRDeliveryDate`	TEXT NOT NULL,
+	`PartID`	TEXT,
+	`VehicleRegNo`	TEXT,
+	`SPCID`	INTEGER NOT NULL UNIQUE,
+	FOREIGN KEY(VehicleRegNo) REFERENCES Vehicle(VehicleRegNo)
+	FOREIGN KEY(PartID) REFERENCES Part(PartID)
+	FOREIGN KEY(SPCID) REFERENCES SPC(SPCID)
+	PRIMARY KEY(`SRID`)
+);
+
+CREATE TABLE `SPC` (
+	`SPCID`	INTEGER NOT NULL UNIQUE,
+	`SPCName`	TEXT NOT NULL,
+	`SPCAddress`	TEXT NOT NULL,
+	`SPCPhoneNo`	TEXT NOT NULL,
+	PRIMARY KEY(`SPCID`)
+);
+CREATE TABLE Bill(
+    ID INTEGER PRIMARY KEY ASC,
+    Total_Cost REAL NOT NULL,
+    Waranty_ID INTEGER,
+    FOREIGN KEY(Waranty_ID) REFERENCES Vehicle(WarrantyID)
+    
+)
+
+
+CREATE TABLE `Booking` (
+	`BookingID`	INTEGER NOT NULL UNIQUE,
+	`BookingDuration`	TEXT NOT NULL,
+	`BookingDate`	TEXT NOT NULL,
+	`BookingType`	TEXT NOT NULL,
+         Bill_ID INTEGER,
+	`MechanicHourWork`	TEXT NOT NULL,
+	`VehicleRegNo`	TEXT NOT NULL UNIQUE,
+	`MechanicID`	INTEGER NOT NULL UNIQUE,
+	`CustomerID`	INTEGER NOT NULL UNIQUE,
+	FOREIGN KEY(VehicleRegNo) REFERENCES Vehicle(VehicleRegNo)
+	FOREIGN KEY(CustomerID) REFERENCES Customer(CustomerID)
+	FOREIGN KEY(MechanicID) REFERENCES Mechanic(MechanicID)
+        FOREIGN KEY(Bill_ID) REFERENCES Bill(ID)
+	PRIMARY KEY(`BookingID`)
+);
+
+CREATE TABLE `Mechanic` (
+	`MechanicID`	TEXT NOT NULL UNIQUE,
+	`MechanicFirstName`	TEXT NOT NULL,
+	`MechanicLastName`	TEXT NOT NULL,
+	`MechanicHourRate`	INTEGER NOT NULL,
+	PRIMARY KEY(`MechanicID`)
+);
