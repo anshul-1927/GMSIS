@@ -1,5 +1,5 @@
 #                                               Garage Management Information System
-This project was a second year, software enginerring computer science group project. I designed and coded the customer page and the whole application was integrated with the contributions from each group member.
+This is a second year, software enginerring group project. I designed and coded the customer page and the whole application was integrated with the contributions from each group member.
 
 
 
