@@ -66,33 +66,7 @@ Username	 Password	    User Type
 
 10000	  	password  	Admin
 
-10001  		password  	Admin
-
-10002	   	wew         Admin
-
-10003	  	password   	Admin
-
-10004		  password    Admin
-
 10005		  password	  Standard
-
-10006		  cyclelord	  Standard
-
-10007		  icefjord	  Standard
-
-10008		  koearn    	Standard
-
-10009	  	jegkunne	  Standard
-
-10010		  tartu	  	  Standard
-
-10011		  trakD	  	  Standard
-
-10012		  aussy73		  Standard
-
-10013		  heyhey22	  Standard
-
-10014		  czechmoto	  Standard
 
 [:arrow_up:Back to top!](#contents)
 
