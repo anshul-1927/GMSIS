@@ -43,7 +43,7 @@ This program was developed by students in Queen Mary University of London, durin
 
 <div align="center">
   <a href="#">
-    <img src="https://github.research.its.qmul.ac.uk/ecs506u/SE2/blob/master/Documents/Integrated%20ER%20Diagrams/Integrated%20ER%20Diagram.png" alt="ER Diagram" width="75%">
+    <img src="https://github.com/ilyasmohamed/GMSIS/blob/master/Documents/Integrated%20ER%20Diagrams/Integrated%20ER%20Diagram.png" alt="ER Diagram" width="75%">
   </a>
 </div>
 
