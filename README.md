@@ -24,7 +24,7 @@ This program was developed by students in Queen Mary University of London, durin
 [:arrow_up:Back to top!](#contents)
 
 ## Images
-<img src="https://github.com/ilyasmohamed/GMSIS/blob/master/Documents/Screenshots/login.PNG" width="100%"></img> <img src="https://github.com/ilyasmohamed/GMSIS/blob/master/Documents/Screenshots/customer%20screen.PNG" width="100%"></img> <img src="https://github.com/ilyasmohamed/GMSIS/blob/master/Documents/Screenshots/admin%screen.PNG" width="100%"></img>
+<img src="https://github.com/ilyasmohamed/GMSIS/blob/master/Documents/Screenshots/login.PNG" width="75%"></img> <img src="https://github.com/ilyasmohamed/GMSIS/blob/master/Documents/Screenshots/Customer%20screen.PNG" width="75%"></img> <img src="https://github.com/ilyasmohamed/GMSIS/blob/master/Documents/Screenshots/admin%20screen.PNG" width="75%"></img>
 
 ## Team Members
 
