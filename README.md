@@ -7,15 +7,13 @@ This is a second year, software enginerring group project. I designed and coded 
 ## Contents
 
 - [Project Description](#projec-description)
+- [Images](#images)
 - [Team](#team-members)
 - [Designing](#designing)
   - [ER Model](#er-model)
 - [Installation](#installation-and-usage)
 - [Login details](#login-details)
 - [System Requirements](#system-requirements)
-
-
-
 
 ## Project Description
 
@@ -24,6 +22,9 @@ This program is a garage management information system that is intended to serve
 This program was developed by students in Queen Mary University of London, during the academic year 2016-2017, for the computer science module ECS506U Software Engineering Project.
 
 [:arrow_up:Back to top!](#contents)
+
+## Images
+<img src="https://raw.githubusercontent.com/ilyasmohamed/GMSIS/master/Documents/Screenshots/login.png" width="100%"></img> <img src="https://raw.githubusercontent.com/ilyasmohamed/GMSIS/master/Documents/Screenshots/login.png" width="100%"></img> <img src="https://raw.githubusercontent.com/ilyasmohamed/GMSIS/masterDocuments//Screenshots/login.png" width="100%"></img>
 
 ## Team Members
 
